@@ -379,3 +379,44 @@ nav{
     text-transform: capitalize;
     font-weight: 600;
 }
+// Testimonail
+.testimonials{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    margin: 0.4rem;
+}
+.testi-card{
+    width: 50%;
+    border-radius: 10px;
+    padding: 0.5rem;
+    height: 40vh;
+    box-shadow: 0px 0px 3px 0.1px #b8b8b8;
+}
+.fa-quote-right{
+    font-size: 2rem;
+    opacity: 0.7;
+
+
+}
+.text-testi{
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.1px;
+}
+.testi-heading{
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+.testi-role{
+    opacity: 0.7;
+}
+.testi-head{
+    margin-top: 2rem;
+    color: #d900ff;
+}
