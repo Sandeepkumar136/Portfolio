@@ -40,3 +40,17 @@ closeBUtton.addEventListener('click', ()=>{
     sidebar.classList.remove('show-sidebar');
     navbar.classList.remove('hide-nav-bar');
 })
+// Dark Theme
+function ThemeFun(){
+    let body=document.body;
+    body.classList.toggle('dark-mode');
+    let togglebtn=document.querySelector('.ThemeContain');
+    if(body.classList.contains('dark-mode')){
+        togglebtn.classList.remove('bxs-moon');
+        togglebtn.classList.add('bxs-sun');
+    }else{
+        togglebtn.classList.remove('bxs-sun');
+        togglebtn.classList.add('bxs-moon');
+    }
+}
+
