@@ -41,16 +41,35 @@ closeBUtton.addEventListener('click', ()=>{
     navbar.classList.remove('hide-nav-bar');
 })
 // Dark Theme
-function ThemeFun(){
-    let body=document.body;
-    body.classList.toggle('dark-mode');
-    let togglebtn=document.querySelector('.ThemeContain');
-    if(body.classList.contains('dark-mode')){
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const togglebtn = document.querySelector('.ThemeContain');
+
+    // Function to toggle theme
+    function ThemeFun() {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            togglebtn.classList.remove('bxs-moon');
+            togglebtn.classList.add('bxs-sun');
+            localStorage.setItem('theme', 'dark-mode');
+        } else {
+            togglebtn.classList.remove('bxs-sun');
+            togglebtn.classList.add('bxs-moon');
+            localStorage.setItem('theme', 'light-mode');
+        }
+    }
+
+    // Apply the saved theme preference
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark-mode') {
+        body.classList.add('dark-mode');
         togglebtn.classList.remove('bxs-moon');
         togglebtn.classList.add('bxs-sun');
-    }else{
-        togglebtn.classList.remove('bxs-sun');
+    } else {
         togglebtn.classList.add('bxs-moon');
     }
-}
+
+    // Event listener for the theme toggle button
+    togglebtn.addEventListener('click', ThemeFun);
+});
 

@@ -34,7 +34,27 @@
         border-radius: 0;
         height: 100vh;
     }
-    
+    footer{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .img-contain-footer{
+        padding: 0;
+    }
+    .footer-logo{
+        width: 45px;
+        height: 45px;
+    }
+    .f-user-name{
+        font-size: 0.9rem;
+    }
+    .config-footer{
+        padding-left: 0.5rem;
+        font-size: 0.7rem;
+    }
+    .text-slider{
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 375px) {
     .social-links-sidebar{
@@ -55,9 +75,87 @@
     .text-contain-index-pera{
         font-size: 0.8rem;
     }
+
 }
 @media only screen and (max-width: 425px) {
     .index-text-section{
         padding: 0.2rem;
     }
+    .course-card{
+        width: 100%;
+        margin: 1rem;
+    }
+    .global-heading{
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+    .heading-course{
+        font-size: 1rem;
+    }
+    .text-course{
+        font-size: 0.8rem;
+    }
+    #openlink-course, .course-span{
+        font-size: 0.8rem;
+    }
+    .testi-heading{
+        font-size: 1rem;
+    }
+    .fa-quote-right{
+        font-size: 1.5rem;
+    }
+    .text-testi{
+        font-size: 0.8rem;
+    }
+    .projects{
+        width: 100%;
+    }
+    .project-text-overflow h3{
+        font-size: 1rem;
+        font-weight: 450;
+    }
+    .label-p{
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .project-disc{
+        font-size: 0.9rem;
+    }
+    .project-text-overflow a{
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        background-color: #0037ff;
+        color: #fff;
+    }
+    .sliderlink{
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+    .text-slider{
+        font-size: 0.8rem;
+    }
+    #crusal-container{
+        height: 40vh;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .article{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .course-card{
+        width: 100%;
+        margin: 0.5rem;
+    }
+    .testimonials{
+        flex-wrap: wrap;
+    }
+    .testi-card{
+        width: 100%;
+        height: fit-content;
+    }
+    
+}
+.bxs-sun{
+    color: #fff;
 }
