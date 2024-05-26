@@ -1,4 +1,12 @@
 /* toggle function */
+/* Indivisual Content */
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+  }
 @media only screen and (min-width: 1036px) {
     #toggle_function{
         display: none;
@@ -16,6 +24,9 @@
     }
     .index-text-section{
         width: 100%;
+    }
+    .sk-contain{
+        height: 80vh;
     }
 }
 /* icon handle */
@@ -53,6 +64,14 @@
         font-size: 0.7rem;
     }
     .text-slider{
+        width: 100%;
+    }
+    #part-and-rev{
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0.4rem;
+    }
+    .partner-container, .reviews-container{
         width: 100%;
     }
 }
@@ -137,6 +156,39 @@
     #crusal-container{
         height: 40vh;
     }
+    /* # */
+    .sk-container{
+        margin: 0.5rem 1rem;
+    }
+    .sk-contain{
+        width: 100%;
+        height: fit-content;
+        padding: 0.5rem 0;
+    }
+    #next-button-sk,#prev-button-sk{
+        background-color: #0256ff;
+        color: #fff;
+    }
+    .skill-heading{
+        font-size: 1.7rem;
+        margin: 0.5rem 0 0 1rem;
+        font-weight: 400;
+    }
+    #btn-skill-left, #btn-skill-right{
+        font-size: 1.2rem;
+    }
+    #heading-skill{
+        font-size: 1rem;
+
+    }
+    #text-skill{
+        font-size: 0.8rem;
+    }
+    #skill-container{
+        /* background-color: #ffffff5c; */
+        box-shadow: 0px 0px 6px 0.2px #0037ff;
+        border-radius: 15px;
+    }
 }
 @media only screen and (max-width: 1100px) {
     .article{
@@ -153,6 +205,19 @@
     .testi-card{
         width: 100%;
         height: fit-content;
+    }
+    #skill-container{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding: 0.5rem;
+    }
+    #skil-img-container{
+        width: 100%;
+        height: 50%;
+    }
+    .align-skill-contain{
+        height: 50%;
     }
     
 }

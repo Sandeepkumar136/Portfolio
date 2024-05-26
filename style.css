@@ -701,11 +701,226 @@ footer {
   border-radius: 5px;
 }
 
-#loading {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2em;
-  color: white;
+#skill-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin: 0.4rem;
+  height: 60vh;
+  align-items: center;
+  padding: 2rem;
+}
+
+#skil-img-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 1px -1px 100rem 6px rgba(0, 132, 255, 0.75);
+  -webkit-box-shadow: 1px -1px 100rem 6px rgba(0, 132, 255, 0.75);
+  -moz-box-shadow: 1px -1px 100rem 6px rgba(0, 132, 255, 0.75);
+}
+
+#skill-img {
+  width: 100%;
+  height: 100%;
+}
+
+.align-skill-contain {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#btn-skill-left, #btn-skill-right {
+  font-size: 2rem;
+  outline: none;
+  padding: 2.5px 10px;
+  color: #0800ff;
+  background-color: #dedede;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#heading-skill {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#text-skill {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+#part-and-rev {
+  display: flex;
+  justify-content: space-around;
+}
+
+.partner-container, .reviews-container {
+  width: 350px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 2.5px 1px #999;
+  border-radius: 15px;
+}
+
+.partner-contain, .reviews-contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.heading-partner, .heading-reviews {
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-bottom: 3px solid #0800ff;
+}
+
+#img-partner, #img-reviews {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: 2.5px 1.5px 2px 0.2px #0800ff;
+}
+
+#tittle-partner, #tittle-reviews {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+#job-partner, #job-reviews {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #0800ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+#disc-partner, #disc-reviews {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.button-contain-partner, .button-contain-reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#btn-next-partner, #btn-next-reviews, #btn-perv-partner, #btn-perv-reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #0037ff;
+  border: none;
+  outline: none;
+  background-color: #ebe9e9;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.config-sensial-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  flex-direction: column;
+}
+
+.profession-container {
+  margin: 0.4rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+
+.profession-contain {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 300px;
+  box-shadow: 0px 0px 2.5px 1px #999;
+}
+
+.prof-upper-contain {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+
+.profession-title {
+  font-size: 1.2rem;
+  font-weight: 450;
+  text-transform: capitalize;
+}
+
+.btn-contain-prof {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+#button-prof-down, #button-prof-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: #0256ff;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profession-description {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+#button-prof-up {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

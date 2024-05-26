@@ -113,4 +113,4 @@ function fetchFunction(){
     }).catch(error=>console.error('This is the error', error))
 };
 
-fetchFunction()
+fetchFunction();
