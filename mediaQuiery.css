@@ -74,6 +74,12 @@
     .partner-container, .reviews-container{
         width: 100%;
     }
+    .profession-container{
+        flex-wrap: wrap;
+    }
+    #chart-container{
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 375px) {
     .social-links-sidebar{
@@ -189,6 +195,13 @@
         box-shadow: 0px 0px 6px 0.2px #0037ff;
         border-radius: 15px;
     }
+    .chart-base-contain, .chart, #chart-container{
+        height: fit-content;
+    }
+    /* .chart-base-contain{
+        margin: 0.4rem;
+    } */
+
 }
 @media only screen and (max-width: 1100px) {
     .article{

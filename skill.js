@@ -252,4 +252,183 @@ const professionals = [
       }
     });
   });
+  // Profession Data Configration
+  const ProfessionDataContainer=document.querySelectorAll(".profession-contain");
+
+  ProfessionDataContainer.forEach((DataResponse)=>{
+    const ToggleBtnProf=DataResponse.querySelector(".btn-contain-prof");
+
+    ToggleBtnProf.addEventListener('click', ()=>{
+      ProfessionDataContainer.forEach((peram)=>{
+        if(peram !==DataResponse){
+          peram.classList.remove("data-manipulation");
+        }
+      })
+      DataResponse.classList.toggle("data-manipulation");
+    })
+  })
+
+
+
+
+
+  // Chart
+  const USERNAME = 'Sandeepkumar136'; // Replace with your GitHub username
+  const BASE_URL = 'https://api.github.com';
+  let DAYS_TO_FETCH = 5;
+  let chartInstance = null; // Variable to hold the chart instance
+  
+  document.addEventListener('DOMContentLoaded', () => {
+      const numberInput = document.getElementById('git_days');
+      const submitButton = document.getElementById('git_daysBtn');
+  
+      // Function to validate and set the input value
+      const validateAndSetInputValue = () => {
+          const value = parseInt(numberInput.value, 10);
+          if (!isNaN(value) && value >= 5 && value <= 90) {
+              DAYS_TO_FETCH = value;
+              renderChart();
+          } else {
+              alert('Please enter a number between 5 and 90.');
+          }
+      };
+  
+      // Event listener for input to restrict to two characters
+      numberInput.addEventListener('input', () => {
+          const value = numberInput.value;
+          if (value.length > 2) {
+              numberInput.value = value.slice(0, 2);
+          }
+      });
+  
+      // Event listener for submit button click
+      submitButton.addEventListener('click', validateAndSetInputValue);
+  
+      // Initial render of the chart
+      renderChart();
+  });
+  
+  const getAllEvents = async (username) => {
+      let allEvents = [];
+      let page = 1;
+      let perPage = 100; // Maximum number of results per page
+  
+      const sinceDate = new Date();
+      sinceDate.setDate(sinceDate.getDate() - DAYS_TO_FETCH);
+      const since = sinceDate.toISOString();
+  
+      while (true) {
+          const url = `${BASE_URL}/users/${username}/events?page=${page}&per_page=${perPage}`;
+          try {
+              const response = await fetch(url);
+              if (!response.ok) {
+                  throw new Error(`Error fetching events: ${response.statusText}`);
+              }
+              const events = await response.json();
+  
+              if (events.length === 0) {
+                  break;
+              }
+  
+              const filteredEvents = events.filter(event => new Date(event.created_at) >= sinceDate);
+              allEvents = allEvents.concat(filteredEvents);
+              page++;
+          } catch (error) {
+              console.error('Network error:', error);
+              break;
+          }
+      }
+  
+      return allEvents;
+  };
+  
+  const processEvents = (events) => {
+      const data = {};
+  
+      events.forEach(event => {
+          const eventDate = new Date(event.created_at);
+          const dateKey = eventDate.toISOString().split('T')[0];
+  
+          if (!data[dateKey]) {
+              data[dateKey] = { repoCreations: 0, commits: 0 };
+          }
+  
+          if (event.type === 'CreateEvent' && event.payload.ref_type === 'repository') {
+              data[dateKey].repoCreations++;
+          }
+  
+          if (event.type === 'PushEvent') {
+              data[dateKey].commits += event.payload.commits.length;
+          }
+      });
+  
+      return data;
+  };
+  
+  const renderChart = async () => {
+      const allEvents = await getAllEvents(USERNAME);
+      const data = processEvents(allEvents);
+  
+      const today = new Date();
+      const dates = Array.from({ length: DAYS_TO_FETCH }, (_, i) => {
+          const date = new Date();
+          date.setDate(today.getDate() - i);
+          return date.toISOString().split('T')[0];
+      }).reverse();
+  
+      const repoCreations = dates.map(date => data[date]?.repoCreations || 0);
+      const commitCounts = dates.map(date => data[date]?.commits || 0);
+  
+      const ctx = document.getElementById('activityChart').getContext('2d');
+  
+      // Destroy the existing chart instance if it exists
+      if (chartInstance) {
+          chartInstance.destroy();
+      }
+  
+      // Create a new chart instance
+      chartInstance = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: dates,
+              datasets: [{
+                  label: 'Repositories Created',
+                  data: repoCreations,
+                  fill: false,
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  yAxisID: 'y1',
+                  tension: 0.1
+              }, {
+                  label: 'Commits',
+                  data: commitCounts,
+                  fill: false,
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  yAxisID: 'y2',
+                  tension: 0.1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  },
+                  y1: {
+                      type: 'linear',
+                      position: 'left'
+                  },
+                  y2: {
+                      type: 'linear',
+                      position: 'right',
+                      grid: {
+                          drawOnChartArea: false
+                      }
+                  }
+              }
+          }
+      });
+  };
+  
+  renderChart().catch(error => {
+      console.error('Error:', error);
+  });
   

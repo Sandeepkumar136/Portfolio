@@ -74,6 +74,7 @@
             </div>
         </div>
     </section>
+    <div class="heading-left-align">Professions</div>
     <section class="profession-container">
         <div class="profession-contain">
             <div class="prof-upper-contain">
@@ -136,6 +137,19 @@
             </div>
         </div>
     </section>
+    <div class="heading-left-align">DATA of Github</div>
+    <div class="git-dat-maini">
+        <label id="gitlabel" for="git_days">Enter Last Days:</label>
+        <input type="number" name="git_days" min="0" max="90" maxlength="2" id="git_days" required/>
+        <button type="submit" id="git_daysBtn">view</button>
+    </div>
+    <section class="chart-base-contain">
+        <div class="chart">
+            <div id="chart-container">
+                <canvas id="activityChart"></canvas>
+            </div>
+        </div>
+    </section>
     <article id="part-and-rev">
         <div class="partner-container">
             <h2 class="heading-partner">
@@ -188,5 +202,7 @@
     <script src="./skill.js"></script>
     <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 </html>
