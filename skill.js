@@ -432,3 +432,58 @@ const professionals = [
       console.error('Error:', error);
   });
   
+
+
+  // dialogue box
+  const dialogue_box=document.querySelector('.dialog-container');
+  const showDialogue=document.getElementById("button-show-dialogue");
+
+
+  showDialogue.addEventListener('click', ()=>{
+    dialogue_box.classList.add('showResume');
+  });
+
+dialogue_box.addEventListener('click', ()=>{
+  if(event.target===dialogue_box){
+    dialogue_box.classList.remove('showResume');
+  }
+})
+
+let dailog_contain=document.querySelector('.dialog-contain');
+let resumefile=`https://drive.google.com/file/d/19G3CJ9nimHHyxcMRXeev_nGzAF5zFpNp/view?usp=drive_link`;
+let qr_code=`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=google.com/${resumefile}`;
+
+
+function myFunction(addData){
+  let img_qr_container=document.createElement('div');
+  img_qr_container.classList.add('img-qr-container');
+
+  let img=document.createElement('img');
+  img.classList.add('img-qr');
+  img.src=addData;
+  img.alt='Qr-Code';
+
+  let title=document.createElement('p');
+  title.classList.add('tittle-qr');
+  title.textContent='scan or download resume';
+
+  img_qr_container.appendChild(img);
+  img_qr_container.appendChild(title);
+
+  let button=document.createElement('button');
+  button.classList.add('resume-dnld-btn');
+  button.textContent='Download Anyway';
+
+  button.addEventListener('click', ()=>{
+    window.open(resumefile, 'blank');
+  })
+
+  dailog_contain.appendChild(img_qr_container);
+  dailog_contain.appendChild(button);
+
+  return img_qr_container, button;
+};
+
+window.addEventListener('DOMContentLoaded', ()=>{
+  dailog_contain.append(myFunction(qr_code))
+})

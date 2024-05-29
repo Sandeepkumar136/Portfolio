@@ -1052,4 +1052,255 @@ footer {
 /* Firefox */
 .git-dat-maini [type=number] {
   -moz-appearance: textfield;
+}
+
+.lang-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.lang-base-contain {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: 0.5rem;
+}
+
+.lang-base-heading {
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  opacity: 0.8;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: left;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.lang-icon-contain {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icon-lang {
+  font-size: 3rem;
+  transition: 0.2s all;
+}
+
+.icon-lang:hover {
+  transform: scale(1.8);
+  text-shadow: 0px 0px 50px #003cff;
+}
+
+.bxl-html5 {
+  color: #ff7b00;
+}
+
+.bxl-css3 {
+  color: #4b4bfe;
+}
+
+.bxl-javascript {
+  color: #ffea00;
+}
+
+.bxl-react {
+  color: #0000ff;
+}
+
+.bxl-bootstrap {
+  color: #0000ff;
+}
+
+.bxl-tailwind-css {
+  color: #0000ff;
+}
+
+.bxl-nodejs {
+  color: #00ff33;
+}
+
+.bxl-go-lang {
+  color: red;
+}
+
+.bxl-python {
+  color: rgb(0, 177, 0);
+}
+
+@media only screen and (max-width: 330px) {
+  .icon-lang {
+    font-size: 2rem;
+  }
+}
+.config-heading-sk {
+  margin-top: 2rem;
+}
+
+#bbcardsContainer {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 0.4rem;
+  margin-right: 1rem;
+  place-items: center;
+}
+
+.bb-card {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  padding-bottom: 2rem;
+  border-radius: 15px;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 3px 0.5px #333;
+  background-color: rgba(255, 255, 255, 0.1921568627);
+}
+
+.bb-img-contain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.bb-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1.5px 0.2px #999;
+}
+
+.bb-username {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bb-date {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-text-decoration: underline 1px solid #000;
+          text-decoration: underline 1px solid #000;
+}
+
+.bb-tittle {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.bb-bisc {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #003cff;
+}
+
+.bb-btn-config {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  border: none;
+  outline: none;
+  padding: 7px 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #0037ff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.bb-card-downward {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dialog-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(108, 108, 108, 0.3803921569);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: -5;
+}
+
+.showResume {
+  visibility: visible;
+  z-index: 5;
+}
+
+.dialog-contain {
+  display: grid;
+  place-items: center;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 300px;
+  height: 400px;
+  gap: 1rem;
+}
+
+.img-qr-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.img-qr {
+  width: 200px;
+  height: 200px;
+}
+
+.tittle-qr {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.resume-dnld-btn {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  background-color: #003cff;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.resume-dnld-btn:hover {
+  background-color: #5c82ff;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

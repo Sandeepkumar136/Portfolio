@@ -1,0 +1,27 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      DEPLOYMENT_KEY: ${{ secrets.DEPLOYMENT_KEY }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install any dependencies or build steps here
+
+      - name: Deploy
+        run: |
+          # Use the deployment key from environment variable
+          echo "Deploying website using secret: $DEPLOYMENT_KEY"
+          # Add your deployment commands here, using $DEPLOYMENT_KEY as needed
+
+      # Additional steps here

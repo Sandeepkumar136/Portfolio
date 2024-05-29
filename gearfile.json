@@ -1,0 +1,38 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "category": "PC Spces",
+            "data": [
+                {
+                    "id":1,
+                    "item": "Inspiron 3505",
+                    "disc": "I brought this laptop to my earning in 2022. I was thought to much than i decided to purchase the laptop for the purpose of learn program. It is really not getting desappoint me.",
+                    "img": "https://i.ibb.co/bQDd6js/laptop.jpg",
+                    "alt": "laptop",
+                    "link": "https://www.amazon.in/Dell-Inspiron-Graphics-Anti-Glare-D560790WIN9BE/dp/B09TNY95RK/ref=sr_1_5?crid=2RE3KZHNATNM6&keywords=Inspiron%2B3505%2B8gb%2Bram%2B256gb%2Bssd%2B1tb%2Bhdd%2Bamd%2Bryzen%2B5&qid=1692538285&s=computers&sprefix=inspiron%2B3505%2B8gb%2Bram%2B256gb%2Bssd%2B1tb%2Bhdd%2Bamd%2Bryzen%2B5%2Ccomputers%2C297&sr=1-5&th=1&language=en_IN"
+                },
+                {
+                    "id":2,
+            "itmem":"Zeb-DLK01",
+            "disc": "I bought this when i did not have any external keyboard.Its is literally good for basic segment. Actually I tired roughly this keyborad but it do not have any complaint.",
+            "img": "https://i.ibb.co/52F263d/keyboard.jpg",
+            "alt":"keyboard",
+            "link": "https://www.amazon.in/Zebronics-DLK01-Multimedia-Keyboard-White/dp/B07RT67LV1/ref=sr_1_16?crid=7S5KTCINMXVY&keywords=keyboard&qid=1692533108&sprefix=keyboar%2Caps%2C368&sr=8-16&th=1"
+                },
+                {
+                    "id":3,
+                    "item": "TP-Link UH400 Portable HUB",
+                    "disc": "This is very good in every point. Actually I tired roughly this DATA HUB but it do not have any complaint and it is very light weight.",
+                    "img": "Speed is literaly good in this price range and much more USB debug option.this is also comes with metal body.",
+                    "alt": "hub",
+                    "link": ""
+                },
+                {
+                    "id":4,
+                    "item":"HP v236w"
+                }
+            ]
+        }
+    ]
+}
